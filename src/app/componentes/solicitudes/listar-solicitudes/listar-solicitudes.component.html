@@ -1,0 +1,21 @@
+<a class="btn btn-primary" routerLink="crear">Crear Solicitud</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Cliente</th>
+
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Solicitudes">
+        <td>{{item.cliente.nombres}} {{item.cliente.apellidos}}</td>
+        <td *ngIf="item.aprobado; else elseBlock" >Aprobado</td>
+        <ng-template #elseBlock>No Aprobado</ng-template>
+
+        <td><a mdbRipple type="button" class="btn btn-danger" [routerLink]="['editar/',item.id]">Ver Detalles</a>
+      </tr>
+ 
+    </tbody>
+  </table>

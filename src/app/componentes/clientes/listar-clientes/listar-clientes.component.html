@@ -1,0 +1,23 @@
+<a class="btn btn-primary" routerLink="crear">Crear Cliente</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Puntuación</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Clientes">
+        <td>{{item.id}}</td>
+        <td>{{item.nombres}}</td>
+        <td>{{item.apellidos}}</td>
+        <td>{{item.puntuacion}}</td>
+        <td><button mdbRipple type="button" class="btn btn-danger">Eliminar</button>
+            <button mdbRipple type="button" class="btn btn-warning">Editar</button></td>
+      </tr>
+ 
+    </tbody>
+  </table>

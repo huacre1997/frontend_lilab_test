@@ -1,0 +1,8 @@
+<form [formGroup]="formularioSolicitudes"  (ngSubmit)="enviarDatos()">
+    <label for="">Cliente</label>
+<select name="" formControlName="cliente" id="" class="form-control">
+    <option  *ngFor="let item of Clientes" value="{{item.id}}">{{item.nombres}} {{item.apellidos}}</option>
+</select>
+<input type="number" formControlName="monto">
+<button type="submit">Crear</button>
+</form>

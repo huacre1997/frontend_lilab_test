@@ -1,0 +1,17 @@
+<form [formGroup]="formularioCliente" (ngSubmit)="enviarDatos()">
+
+    <mdb-form-control>
+        <input mdbInput type="text" id="form1" formControlName="nombres" class="form-control" />
+        <label mdbLabel class="form-label" for="form1">Nombres</label>
+      </mdb-form-control>
+      <mdb-form-control>
+        <input mdbInput type="text" id="form1" formControlName="apellidos" class="form-control" />
+        <label mdbLabel class="form-label"  for="form1">Apellidos</label>
+      </mdb-form-control>  
+      <mdb-form-control>
+        <input mdbInput type="text" id="form1" formControlName="puntuacion" class="form-control" />
+        <label mdbLabel class="form-label"  for="form1">Puntuacion</label>
+      </mdb-form-control>  
+      <button class="btn btn-success" type="submit" > Guardar</button>
+    
+</form>
